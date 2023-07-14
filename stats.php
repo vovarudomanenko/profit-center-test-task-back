@@ -18,11 +18,12 @@ try {
     $offset = $_GET['offset'] ?? 0;
     $limit = $_GET['limit'] ?? 25;
 
+    // todo: use only one statement
     $countStmt = $pdo->prepare("SELECT COUNT(*) AS total FROM statistics");
     $countStmt->execute();
     $countResult = $countStmt->fetch();
 
-    $stmt = $pdo->prepare("SELECT *FROM statistics GROUP BY id LIMIT ? OFFSET ?");
+    $stmt = $pdo->prepare("SELECT * FROM statistics GROUP BY id LIMIT ? OFFSET ?");
     $stmt->execute([$limit, $offset]);
     $result = $stmt->fetchAll();
     echo json_encode([
