@@ -23,7 +23,7 @@ try {
     $countStmt->execute();
     $countResult = $countStmt->fetch();
 
-    $stmt = $pdo->prepare("SELECT * FROM statistics GROUP BY id ORDER BY `start` DESC LIMIT ? OFFSET ?");
+    $stmt = $pdo->prepare("SELECT * FROM statistics GROUP BY id ORDER BY `start_time` DESC LIMIT ? OFFSET ?");
     $stmt->execute([$limit, $offset]);
     $result = $stmt->fetchAll();
     echo json_encode([
