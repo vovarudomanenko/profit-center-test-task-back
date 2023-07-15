@@ -20,8 +20,8 @@ try {
     $end_time = $_POST['end_time'];
     $start_time = $_POST['start_time'];
     $time_spent = $_POST['time_spent'];
-    $most_frequent_value = $_POST['most_frequent_value'];
-    $most_frequent_value_count = $_POST['most_frequent_value_count'];
+    $mode = $_POST['mode'];
+    $mode_count = $_POST['mode_count'];
     $standard_deviation = $_POST['standard_deviation'];
     $lost_quotes = $_POST['lost_quotes'];
     $quotes_count = $_POST['quotes_count'];
@@ -34,8 +34,8 @@ try {
                    start_time,
                    end_time,
                    time_spent,
-                   most_frequent_value,
-                   most_frequent_value_count, 
+                   mode,
+                   mode_count, 
                    standard_deviation,
                    lost_quotes,
                    quotes_count
@@ -48,8 +48,8 @@ try {
         $start_time,
         $end_time,
         $time_spent,
-        $most_frequent_value,
-        $most_frequent_value_count,
+        $mode,
+        $mode_count,
         $standard_deviation,
         $lost_quotes,
         $quotes_count
