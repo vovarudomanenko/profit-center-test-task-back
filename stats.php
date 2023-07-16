@@ -18,7 +18,7 @@ try {
     $offset = $_GET['offset'] ?? 0;
     $limit = $_GET['limit'] ?? 25;
 
-    // todo: use only one statement
+    // todo: use single statement to retrieve total count and records at once
     $countStmt = $pdo->prepare("SELECT COUNT(*) AS total FROM statistics");
     $countStmt->execute();
     $countResult = $countStmt->fetch();
