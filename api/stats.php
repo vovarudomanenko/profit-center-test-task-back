@@ -2,8 +2,8 @@
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
 
-$config = require './config.php';
-require_once  './functions.php';
+$config = require './../config.php';
+require_once  './../functions.php';
 
 try {
     $pdo = pdo_connect(
